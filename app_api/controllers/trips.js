@@ -32,13 +32,42 @@ const tripsFindByCode = async(req, res) => {
 
     if (!q) {
         // Database returned no data
-        return rees.status(404).json(err);
+        return res.status(404).json(err);
     } else { // Return Resulting trip list
         return res.status(200).json(q);
     }
 };
 
+// POST: /trips - adds a new Trip regardless of outcome
+// response must include HTML status code and JSON message to the requesting client
+const tripsAddTrip = async(req, res) => {
+    const newTrip = new Trip({
+        code: req.body.code,
+        name: req.body.name,
+        length: req.body.length,
+        start: req.body.start,
+        resort: req.body.resort,
+        perPerson: req.body.perPerson,
+        image: req.body.image,
+        description: req.body.description
+    });
+    
+    const q = await newTrip.save();
+
+    if(!q)
+    { // Database returned no data
+        return res
+            .status(400)
+            .json(err);
+    } else{ // Return new trip
+        return res
+        .status(201)
+        .json(q);
+    }
+};
+
 module.exports = {
     tripsList,
-    tripsFindByCode
+    tripsFindByCode,
+    tripsAddTrip
 }
