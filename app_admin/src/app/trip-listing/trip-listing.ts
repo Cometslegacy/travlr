@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { TripCard } from '../trip-card/trip-card';
 
@@ -23,7 +23,8 @@ export class TripListing implements OnInit {
 
   constructor(
     private tripData: TripData,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
     ) {
     console.log('trip-listing constructor');
   }
@@ -40,6 +41,7 @@ export class TripListing implements OnInit {
         if(value.length > 0)
         {
           this.message = 'There are ' + value.length + ' trips available.';
+          this.cdr.detectChanges();
         }
         else {
           this.message = 'There were no trips recieved from the database';

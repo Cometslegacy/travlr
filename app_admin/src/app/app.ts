@@ -4,6 +4,7 @@ import { TripListing } from './trip-listing/trip-listing'
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, TripListing],
   templateUrl: './app.html',
   styleUrl: './app.css'
