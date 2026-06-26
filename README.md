@@ -61,7 +61,6 @@ Some common API requests include:
 - GET requests to retrieve data
 - POST requests to add new data
 - PUT requests to update data
-- DELETE requests to remove data
 
 Testing these endpoints makes sure the frontend is receiving the correct information and that the backend is handling requests correctly.
 
