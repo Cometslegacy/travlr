@@ -10,9 +10,9 @@ Travlr is a full stack web application that has both a customer side and an admi
 
 ## Frontend Development
 
-Travlr uses Express HTML, JavaScript, and an Angular Single Page Application (SPA).
+Travlr uses Express, JavaScript, and an Angular Single Page Application (SPA).
 
-Express HTML works by having the server send complete HTML pages to the browser. This works well for simpler websites because the server handles creating the pages. However, the downside is that every time the user navigates, the browser may need to reload a new page.
+Express works by having the server send complete HTML pages to the browser. This works well for simpler websites because the server handles creating the pages. However, the downside is that every time the user navigates, the browser may need to reload a new page.
 
 JavaScript adds more interaction to a website by allowing the page to respond to user actions without always needing to reload. It can update parts of the page, handle events, and communicate with the backend.
 
