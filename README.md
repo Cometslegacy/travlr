@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Travlr project is a full stack web application that has both a customer side and an admin side. The customer side allows users to view travel information, while the admin side allows administrators to manage the travel data. In the final version of the project, security was added to the admin login using authentication so that only authorized users can access the admin features.
+Travlr is a full stack web application that has both a customer side and an admin side. The customer side allows users to view travel information, while the admin side allows administrators to manage the travel data. In the final version of the project, security was added to the admin login using authentication so that only authorized users can access the admin features.
 
 ---
 
@@ -10,7 +10,7 @@ The Travlr project is a full stack web application that has both a customer side
 
 ## Frontend Development
 
-The Travlr project uses Express HTML, JavaScript, and an Angular Single Page Application (SPA).
+Travlr uses Express HTML, JavaScript, and an Angular Single Page Application (SPA).
 
 Express HTML works by having the server send complete HTML pages to the browser. This works well for simpler websites because the server handles creating the pages. However, the downside is that every time the user navigates, the browser may need to reload a new page.
 
